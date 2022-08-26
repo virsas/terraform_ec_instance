@@ -35,7 +35,7 @@ variable "ec_redis_chat" {
 # Module
 ##############
 module "ec_redis_chat" {
-  source = "github.com/virsas/terraform_ec_instance"
+  source = "git::https://github.com/virsas/terraform_ec_instance.git?ref=v1.0.0"
   instance = var.ec_redis_chat
   security_groups = [ module.vpc_sg_admin.id, module.vpc_sg_ec.id ]
   subnet = module.ec_subnet_default.name
